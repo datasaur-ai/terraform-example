@@ -1,9 +1,3 @@
-variable "eks_cluster_source" {
-  description = "Source code for the EKS cluster module"
-  type        = string
-  default     = "./eks-cluster"
-}
-
 variable "vpc_name" {
   description = "VPC Name"
   type        = string

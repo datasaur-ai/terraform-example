@@ -1,12 +1,12 @@
 module "public-eks-cluster" {
   source         = "./eks-cluster"
-  vpc_name       = "my-VPC1"
-  cluster_name   = "my-EKS1"
-  desired_size   = 1
-  max_size       = 1
-  min_size       = 1
-  instance_types = ["t3.small"]
-  region         = "us-east-2"
+  vpc_name       = var.vpc_name
+  cluster_name   = var.cluster_name
+  desired_size   = var.desired_size
+  max_size       = var.max_size
+  min_size       = var.min_size
+  instance_types = [var.instance_types]
+  region         = var.region
 }
 
 module "ingress-nginx" {
